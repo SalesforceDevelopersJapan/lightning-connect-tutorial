@@ -51,7 +51,7 @@ Now you've configured an external data source, you can select the tables you wis
 
 1. Click **Sync**
 
-## Step 3: Inspect the External Objects
+## Step 3: Inspect the External Object Configuration
 
 1. If you are not already on the OrderDB external data source page from the previous step, click **Develop** > **External Data Sources** and then click the OrderDB external data source.
 
@@ -66,7 +66,7 @@ Now you've configured an external data source, you can select the tables you wis
 
 	![](images/orders-external-object.png)
 
-## Step 4: Create a Custom Tab to Easily Access Orders
+## Step 4: Create a Custom Tab to Easily Access Order Records
 
 1. Click **Setup** (upper right corner)
 
@@ -90,7 +90,7 @@ Now you've configured an external data source, you can select the tables you wis
 
 ## Step 5: View the External Order Data
 
-1. Click the app menu (top right), then **External Orders**
+1. If the app menu (top right) is not already showing **External Orders**, then click the app menu and select it.
 
 	![](images/external-orders-app.png)
 
@@ -110,9 +110,11 @@ Now you've configured an external data source, you can select the tables you wis
 
 	> It's important to remember that external data is never duplicated in Salesforce. Lightning Connect always fetches current external data, in real-time.
 
+Now we can see external data in Salesforce, we need to link it to existing data by creating *lookup relationships*.
+
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
 <a href="create-developer-edition.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
-<a href="create-apex-controller.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="create-lookup-relationships.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 </div>

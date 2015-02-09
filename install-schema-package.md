@@ -2,26 +2,38 @@
 layout: module
 title: Module 2&#58; Installing the Schema Package
 ---
-TBD!!!
 
-In this module, you create a Developer Edition Account that provides you with a full-featured but isolated Salesforce environment to perform the exercises in this workshop.
-
-> Even if you already signed up for a Developer Edition account, it is **strongly recommended** that you sign up for a new Developer Edition account for this tutorial. Some of the steps in this tutorial may break some of the work you already did with your existing account.
-
+During this tutorial you will integrate sample order data with the existing account data in your Salesforce Developer Edition. In this module you will install a package that configured the necessary schema on the account object, creating a 'Customer ID' field, and assigns a value for Customer ID to each account.
 
 ## Steps
 
-1. Open a browser and access the following URL: [http://developer.salesforce.com/signup](http://developer.salesforce.com/signup)
+1. Open a browser and start the installation by [clicking here](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tE00000001aqG).
 
-2. Fill in the signup form:
-  - Enter your First Name and Last Name
-  - For **Email**, enter an email address you have access to at this time (you will need to open an activation email)
-  - For **Username**, specify a unique user name in the form of an email address. For example: **firsname.lastname@workshop.com** (It doesn't have to be an existing email address: the Username is not used to send you emails)
-  - Check the Master Subscription Agreement checkbox and click the **Sign Me Up** button
+1. Click **Continue**.
 
-3. Check your email. You will receive an activation email for your Developer Edition Account.
+	![](images/package-install-1.png)
 
-4. Click the link in the activation email. Enter your new password information, and click **Save**.
+1. Scroll down and click **Next** to accept the package access defaults.
+
+	![](images/package-install-2.png)
+
+1. Click **Next** to access to the package to admins only.
+
+	![](images/package-install-3.png)
+
+1. Click **Install** to complete the package installation
+
+	![](images/package-install-4.png)
+
+1. Click the app menu (top right), then **External Orders**
+
+	![](images/external-orders-app.png)
+
+1. Click **Set Customer IDs** to assign customer ID numbers to the sample account records in your Developer Edition.
+
+	![](images/set-customer-ids.png)
+
+Your Salesforce Developer Edition is now set up for the main section of the tutorial. It's time to integrate some data!
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
