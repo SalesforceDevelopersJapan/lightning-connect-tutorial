@@ -142,11 +142,11 @@ Now you can see the line items on the order page, the next step is to configure 
 
 	![](images/account-with-edited-list.png)
 
-
+Now your external order data is integrated seamlessly with accounts. All that's left is to enable Chatter feeds on order records, and view the complete integration in the Salesforce1 mobile app.
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
-<a href="create-developer-edition.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
-<a href="create-lookup-relationships.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="configure-data-source-objects.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
+<a href="enable-chatter-salesforce1.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 </div>

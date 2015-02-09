@@ -27,7 +27,7 @@ The following browsers are supported when working with the Developer Console:
 ## Issues
 
 - Please create an issue [here](https://github.com/metadaddy-sfdc/lightning-connect-tutorial/issues) if you run
-into any problems or if you have a suggestion to improve this workshop.
+into any problems or if you have a suggestion to improve this tutorial.
 - You can also use the Comments section at the bottom of each module to ask a question or report a problem.
 
 
