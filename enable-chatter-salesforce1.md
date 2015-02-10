@@ -21,13 +21,13 @@ In the current release, *field tracking* is not available for external objects; 
 
 1. Select **Orders** (note the plural - the singular Order is a standard object), click **Enable Feed Tracking** and click **Save**.
 
+	![](images/enable-feed-tracking.png)
+
 1. If the app menu (top right) is not already showing **External Orders**, then click the app menu and select it.
 
 1. Click the **Orders** tab.
 
 1. Click the External ID of an order in the Recent Orders list.
-
-	![](images/enable-feed-tracking.png)
 
 1. Now the order should have a Chatter feed.
 
@@ -37,13 +37,15 @@ In the current release, *field tracking* is not available for external objects; 
 
 ## Step 2: View External Data in Salesforce1
 
-1. Start the Salesforce1 mobile app. You can run Salesforce1 on your mobile device ([get the app](http://www.salesforce.com/mobile)), in the [Salesforce1 Simulator Chrome App](https://chrome.google.com/webstore/detail/salesforce1-simulator/cknbjckicenodbiaejbmkjhldffonggp), or by opening a new browser window with the URL `https://instance.salesforce.com/one/one.app`, where `instance` is the Salesforce instance of your Developer Edition - for example, na15.
+1. Start the Salesforce1 mobile app. You can run Salesforce1 on your mobile device ([get the app](http://www.salesforce.com/mobile)), in the [Salesforce1 Simulator Chrome App](https://chrome.google.com/webstore/detail/salesforce1-simulator/cknbjckicenodbiaejbmkjhldffonggp), or by opening a new browser window with the URL [https://login.salesforce.com/one/one.app](https://login.salesforce.com/one/one.app) (login with your Developer Edition username and password if necessary).
 
-1. Click the **navigation icon** (top left) to open the navigation menu. You should see Accounts and Orders at the top of the Recent list.
+1. Click the **navigation icon** (top left) to open the navigation menu. You should see Accounts and Orders at the top of the Recent list. If they are not at the top, then click **Show More** to show all the objects in the Recent list.
 
 	![](images/s1-nav-menu.png)
 
 1. Click **Orders** to see a list of recent orders.
+
+	> In addition to the external object that you have configured, there is a standard object with the same name, Orders. If you click Orders and see no recent records, look for the other Orders object.
 
 	![](images/s1-recent-orders.png)
 
