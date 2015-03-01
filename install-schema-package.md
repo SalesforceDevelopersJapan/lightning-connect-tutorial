@@ -1,6 +1,6 @@
 ---
 layout: module
-title: Module 2&#58; Installing the Schema Package
+title: モジュール 2&#58; Schemaパッケージのインストール
 ---
 
 During this tutorial you will integrate sample order data with the existing account data in your Salesforce Developer Edition. In this module you will install a package that configured the necessary schema on the account object, creating a 'Customer ID' field, and assigns a value for Customer ID to each account.

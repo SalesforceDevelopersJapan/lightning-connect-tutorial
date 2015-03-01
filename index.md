@@ -1,38 +1,37 @@
 ---
 layout: home
-title: Salesforce Lightning Connect
+title: Salesforce Lightning コネクトチュートリアル
 ---
-In this tutorial, you use Lightning Connect to integrate order data from an external data source, without writing a line of code, and without duplicating any data into Salesforce. You will configure relationships between external objects and accounts in Salesforce, and see how external objects integrate with Chatter and the Salesforce1 mobile app.
+このチュートリアルではLightning コネクトを使用して、コードを一行も書かずに、かつデータをSalesforceへコピーしないで外部データ・ソースにある注文データに接続します。外部オブジェクトとSalesforce内にある取引先との関連を定義でき、外部のオブジェクトがChatterやSalesforce1モバイル・アプリケーションと統合されることが確認できます。
 
 <div style="text-align:center"><img src="images/order-page.png" style="border:none;"/></div>
 
-## What You Will Learn
+## 何を学ぶことができるか
 
-- Configure an external data source
-- Synchronize schema to create external objects in Salesforce
-- Create relationships to link external objects to each other and to standard objects
-- Integrate external objects with Chatter
-- See external objects in action in the Salesforce mobile app
+- 外部データソースの設定
+- Salesforce内に外部オブジェクトを作るためにスキーマを同期する
+- 外部オブジェクトから別の外部オブジェクトもしくは標準オブジェクトに対して関連を作成する
+- 外部オブジェクトとChatterを統合する
+- 外部オブジェクトの動作をSalesforceモバイル・アプリケーションで確認する
 
 
-## Browser Requirements
+## 推奨ブラウザ
 
-The following browsers are supported when working with the Developer Console:
+以下のブラウザがSalesforceの動作でサポートされています:
 
-  - Most recent version of Google Chrome
-  - Most recent version of Mozilla Firefox
-  - Most recent version of Safari
-  - Internet Explorer 9 or higher
+- 最新バージョンのGoogle Chrome
+- 最新バージョンのMozilla Firefox
+- 最新バージョンのSafari
+- Internet Explorer 11 以降
+- それ以外のブラウザのサポートに関しては <a href="https://help.salesforce.com/apex/HTViewHelpDoc?id=getstart_browser_overview.htm" target="_blank">こちら</a> をご覧ください
 
-## Issues
+## 問題をみつけたら？
 
-- Please create an issue [here](https://github.com/developerforce/lightning-connect-tutorial/issues) if you run
-into any problems or if you have a suggestion to improve this tutorial.
-- You can also use the Comments section at the bottom of each module to ask a question or report a problem.
-
+-実際に動作をさせる過程で問題が発生した場合にはぜひIssue <a href="https://github.com/salesforcedevelopersjapan/lightning-connect-tutorial/issues" target="_blank">here</a>を作成してこのチュートリアルの品質改善にご協力下さい。
+- または下にあるコメントセクションにて、質問や問題の報告を行うことも可能です。
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
-<a href="create-developer-edition.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="create-developer-edition.html" class="btn btn-default pull-right">次へ <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 </div>

@@ -1,29 +1,29 @@
 ---
 layout: module
-title: Module 1&#58; Creating a Developer Edition Account
+title: Module 1&#58; Developer Editionアカウントの作成
 ---
-In this module, you create a Developer Edition Account that provides you with a full-featured but isolated Salesforce environment to perform the exercises in this tutorial.
+In このモジュールでは、本ワークショップの演習を行うにための全ての機能が利用可能な、Salesforce Developer Editionアカウントの作成を行います。
 
-> Even if you already signed up for a Developer Edition account, it is **strongly recommended** that you sign up for a new Developer Edition account for this tutorial. Some of the steps in this tutorial may break some of the work you already did with your existing account.
+> もしすでにDeveloper Editionのアカウントをお持ちの場合でも、本チュートリアル内の幾つかのステップは、既存のアカウント内にある設定に影響を与える恐れがあるため、新しいDeveloper Editionアカウントのサインアップを**強く推奨** します。
 
 
-## Steps
+## ステップ
 
-1. Open a browser and access the following URL: [http://developer.salesforce.com/signup](http://developer.salesforce.com/signup)
+1. ブラウザを開き、以下のURLにアクセスします: [http://developer.salesforce.com/signup](http://developer.salesforce.com/signup)
 
-2. Fill in the signup form:
-  - Enter your First Name and Last Name
-  - For **Email**, enter an email address you have access to at this time (you will need to open an activation email)
-  - For **Username**, specify a unique user name in the form of an email address. For example: **firsname.lastname@tutorial.com** (It doesn't have to be an existing email address: the Username is not used to send you emails)
-  - Check the Master Subscription Agreement checkbox and click the **Sign Me Up** button
+2. サインアップフォームを入力します:
+  - 姓および名を入力します
+  - **Eメール**には、今すぐにアクセスすることのできるEメールアドレスを入力します。(アカウント有効化のためのメールを受信する必要があります)
+  - **ユーザ名**には、Eメールアドレス形式の一意なIDが必要となります。例えば: **firsname.lastname@workshop.com** (既存のEメールアドレスである必要はありません : ユーザ名はEメールの送信・受信には使われません。)
+  - マスターサブスクリプション契約を読み同意する場合はチェックをして **サインアップ** ボタンをクリックします
 
-3. Check your email. You will receive an activation email for your Developer Edition Account.
+3. 間もなくDeveloper Editionアカウントの有効化メールを受信しますので、Eメールをチェックします。
 
-4. Click the link in the activation email. Enter your new password information, and click **Save**.
+4. 有効化メールの中にあるリンクをクリックします。パスワード情報を入力し、**保存** をクリックします。
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
 <a href="index.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
-<a href="install-schema-package.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="install-schema-package.html" class="btn btn-default pull-right">次へ <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 </div>
