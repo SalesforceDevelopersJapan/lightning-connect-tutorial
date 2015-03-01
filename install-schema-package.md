@@ -3,41 +3,41 @@ layout: module
 title: モジュール 2&#58; Schemaパッケージのインストール
 ---
 
-During this tutorial you will integrate sample order data with the existing account data in your Salesforce Developer Edition. In this module you will install a package that configured the necessary schema on the account object, creating a 'Customer ID' field, and assigns a value for Customer ID to each account.
+このチュートリアルでは、サンプルの注文データを既存のSalesforce Developer Edition内の取引先のデータと統合します。このモジュールでは、取引先に'Customer ID'項目を追加してスキーマを更新し、それぞれの取引先にCustomer IDを付与します。
 
-## Steps
+## ステップ
 
-1. Open a browser and start the installation by [clicking here](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tE00000001aqG).
+1. ブラウザを開き[こちらをクリック](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tE00000001aqG)してパッケージをインストールします。
 
-1. Click **Continue**.
+1. **次へ**をクリックします。
 
 	![](images/package-install-1.png)
 
-1. Scroll down and click **Next** to accept the package access defaults.
+1. 下へスクロールし、 **次へ** をクリックしてデフォルトのパッケージアクセス権限を許可します。
 
 	![](images/package-install-2.png)
 
-1. Click **Next** to access to the package to admins only.
+1. **次へ** をクリックして、パッケージへのアクセスを管理者のみにします。
 
 	![](images/package-install-3.png)
 
-1. Click **Install** to complete the package installation
+1. **インストール** をクリックし、パッケージのインストールを完了します。
 
 	![](images/package-install-4.png)
 
-1. Click the app menu (top right), then **External Orders**
+1. 右上のアプリケーションメニューより**外部のオーダー** を開きます
 
 	![](images/external-orders-app.png)
 
-1. Click **Set Customer IDs** to assign customer ID numbers to the sample account records in your Developer Edition.
+1. **Customer IDの設定** によって、Customer ID番号がサンプルのDeveloper Edition内のサンプルの取引先レコードに追加されます。
 
 	![](images/set-customer-ids.png)
 
-Your Salesforce Developer Edition is now set up for the main section of the tutorial. It's time to integrate some data!
+これでこのDeveloper Editionはチュートリアルのための準備が整いました。次はいよいよデータを統合してみましょう!
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
-<a href="create-developer-edition.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
-<a href="configure-data-source-objects.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="create-developer-edition.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> 戻る</a>
+<a href="configure-data-source-objects.html" class="btn btn-default pull-right">次へ <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 </div>

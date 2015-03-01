@@ -27,7 +27,7 @@ title: Salesforce Lightning コネクトチュートリアル
 
 ## 問題をみつけたら？
 
--実際に動作をさせる過程で問題が発生した場合にはぜひIssue <a href="https://github.com/salesforcedevelopersjapan/lightning-connect-tutorial/issues" target="_blank">here</a>を作成してこのチュートリアルの品質改善にご協力下さい。
+-実際に動作をさせる過程で問題が発生した場合にはぜひ <a href="https://github.com/salesforcedevelopersjapan/lightning-connect-tutorial/issues" target="_blank">Issue</a>を作成してこのチュートリアルの品質改善にご協力下さい。
 - または下にあるコメントセクションにて、質問や問題の報告を行うことも可能です。
 
 <div class="row" style="margin-top:40px;">

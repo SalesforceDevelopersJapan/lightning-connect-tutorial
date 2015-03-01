@@ -1,27 +1,27 @@
 ---
 layout: module
-title: Next Steps
+title: 次のステップ
 ---
 
-Congratulations on completing this tutorial!
+チュートリアルの完了おめでとうございます!
 
 
-Here are a few things you can do next:
+以下にはいくつかの次のステップがあります:
 
-- If you found this tutorial helpful, let other people know about it:
+- もしこのチュートリアルが良いと思ったら、ぜひ他の方にも共有して下さい:
 
-    <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-url="http://developerforce.github.io/lightning-connect-tutorial" data-text="Salesforce Lightning Connect Tutorial: Data Integration, Lightning Fast!">Tweet</a>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-url="http://salesforcedevelopersjapan.github.io/lightning-connect-tutorial" data-text="Salesforce Lightning コネクトチュートリアル">ツイート</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 
-- Learn more about [Salesforce1 Lightning](http://www.salesforce.com/platform/services/lightning/)
+- [Salesforce1 Lightning](http://www.salesforce.com/platform/services/lightning/)を見て詳細を確認する
 
 
-- Check out [developer.salesforce.com](https://developer.salesforce.com) to explore additional resources
+- [developer.salesforce.com](https://developer.salesforce.com) にて追加のリソースを閲覧する
 
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
-<a href="create-contactdetails-component.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
+<a href="create-contactdetails-component.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> 戻る</a>
 </div>
 </div>

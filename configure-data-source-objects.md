@@ -1,9 +1,9 @@
 ---
 layout: module
-title: Module 3&#58; Configuring an External Data Source and External Objects
+title: モジュール 3&#58; 外部データソース及び外部オブジェクトの設定
 ---
 
-In this module, you will connect to an external database containing sample order data and show orders via external objects in Salesforce.
+このモジュールでは、In this module, you will connect to an external database containing sample order data and show orders via external objects in Salesforce.
 
 ## What you will learn
 - Configure an external data source in Salesforce
