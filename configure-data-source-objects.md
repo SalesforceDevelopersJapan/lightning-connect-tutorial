@@ -3,118 +3,119 @@ layout: module
 title: モジュール 3&#58; 外部データソース及び外部オブジェクトの設定
 ---
 
-このモジュールでは、In this module, you will connect to an external database containing sample order data and show orders via external objects in Salesforce.
+このモジュールでは、サンプルの注文データを含む外部のデータベースへ接続し、Salesforce内の外部オブジェクトで表示を行います。
 
-## What you will learn
-- Configure an external data source in Salesforce
-- Create external object definitions based on the external database schema
-- Show external data in the Salesforce user interface
+## 何を学ぶことができるか
+- Salesforceでの外部データソースの設定
+- 外部データベーススキーマをベースとした外部オブジェクト定義を作成
+- 外部データをSalesforceユーザインタフェースで表示する
 
 
-## Step 1: Configure an External Data Source
+## ステップ 1: 外部データソースの設定
 
-You can configure external data sources to connect Salesforce to outside systems. These might be off-the-shelf products and services, such as SAP, SharePoint or Jitterbit, or a bespoke integration using an OData library such as [odata4j](https://code.google.com/p/odata4j/).
+外部データソースにはSalesforce外のシステムをソースとするデータへの接続設定をすることが可能です。
+これはSAPやSharePoint,Jitterbitなどの既存の製品やサービス、または[odata4j](https://code.google.com/p/odata4j/)などのODataライブラリで作られた手製のシステムとの連携を可能にします。
 
-1. Login to your Salesforce Developer Edition
+1. Salesforce Developer Editionログインします
 
-1. Click **Setup** (upper right corner)
+1. **設定** をクリックします(右上隅)
 
-1. Click **Develop** > **External Data Sources** (left navigation)
+1. **開発** > **External Data Sources** を選択します(左ナビゲーション)
 
-1. Click **New External Data Source**
+1. **新規External Data Sources** をクリックします
 
-1. Enter **OrderDB** as the Label. As you click or tab away from the label field, the Name field should automatically default to OrderDB.
+1.  表示ラベルに **注文データベース** を入力し、名前には **OrderDB** を入力します。
 
-1. Select **Lightning Connect: OData 2.0** as the Type.
+1. 種別に **Lightning Connect: OData 2.0** を選択します。
 
-1. Enter **`https://orderdb.herokuapp.com/orders.svc/`** as the URL.
+1. **`https://orderdb.herokuapp.com/orders.svc/`** をURLに入力します。
 
 	![](images/external-data-source.png)
 
-1. Leave the remaining settings with their default values and click **Save**
+1. 他の設定はデフォルトのままで **保存** をクリックします。
 
-	> Since this is a sample, read-only database, no authentication is required. A real external system would likely require some credentials, and you can configure Lightning Connect to use the same set of credentials for all access to the data source, or seperate credentials for each user. See 'Identity Type' in the [online help](https://help.salesforce.com/HTViewHelpDoc?id=platform_connect_add_external_data_source.htm) for more details.
+	> これはシンプルな読み込み専用のデータベースで認証がない場合の設定となります。実際の外部システムは認証が必要となるケースがほとんどですが、Lightning コネクトでは全てのデータソースへのアクセスに同じセットを利用するか、ユーザ毎に異なる認証を行うかを選択することができます。[オンラインヘルプ](https://help.salesforce.com/HTViewHelpDoc?id=platform_connect_add_external_data_source.htm)の'Identity Type'により詳しい情報があります。
 
-Now you've configured an external data source, you can select the tables you wish to integrate into your Salesforce environment.
+これで外部データソースの設定が完了し、Salesforce環境に任意のテーブル定義を読み込むことが可能になりました。
 
-## Step 2: Create External Objects
+## ステップ 2: 外部オブジェクトの作成
 
-1. If you are not already on the OrderDB external data source page from the previous step, click **Develop** > **External Data Sources** and then click the OrderDB external data source.
+1. もしまだ前のステップにあるOrderDB外部データソースの設定が完了していない場合は、 **開発** > **External Data Sources** をクリックして、OrderDB 外部データ・ソースを定義して下さい。
 
-1. Click **Validate and Sync**
+1.  **検証して同期** をクリックします
 
-	> Lightning Connect retrieves the sample database as OData 2.0 metadata and lists the available tables. [Click here](https://orderdb.herokuapp.com/orders.svc/$metadata) for a look at the metadata XML.
+	> Lightning コネクトはサンプルのデータベースからOData2.0メタデータを使用して、有効なテーブルのリストを取得します。 [こちらをクリック](https://orderdb.herokuapp.com/orders.svc/$metadata) してメタデータXMLを確認できます。
 
-1. Select both **Order** and **OrderDetails**.
+1.  **Order** 及び **OrderDetails** の両方を選択します。
 
 	![](images/select-tables.png)
 
-1. Click **Sync**
+1. **同期** をクリックします。
 
-## Step 3: Inspect the External Object Configuration
+## ステップ 3: 外部オブジェクトの設定を確認
 
-1. If you are not already on the OrderDB external data source page from the previous step, click **Develop** > **External Data Sources** and then click the OrderDB external data source.
+1. もしまだ前のステップにあるOrderDB外部データソースの設定が完了していない場合は、 **開発** > **External Data Sources** をクリックして、OrderDB 外部データ・ソースを定義して下さい。
 
-1. Scroll down to **External Objects** and click **Orders**
+1. **外部オブジェクト** を選択し **Orders**をクリックします
 
 	![](images/click-orders.png)
 
-1. Lightning Connect created this external object from the order database's metadata. If you're familiar with custom objects, you'll notice that this looks very similar. Lightning Connect created a set of custom fields just as you might create them for a custom object. The key differences between external object and custom object definitions are:
-	- External object API names have the suffix `__x` rather than `__c`
-	- External objects have a reference to their external data source and a table within that source.
-	- External objects have different standard fields. **Display URL** is the OData 2.0 URL representing a record in the external database, while **External ID** is the primary key value for each record.
+1. Lightning コネクトは外部オブジェクトをOrderデータベースのメタデータから作成します。カスタムオブジェクトをよく知っていれば、外部オブジェクトは非常に近い使い勝手となっており、すぐに利用できます。Lightning コネクト によって外部オブジェクトにはカスタムオブジェクトと同様にカスタム項目が作成されます。カスタムオブジェクトと外部オブジェクトの主な違いは以下の通りです:
+	- 外部オブジェクトのAPI名はサフィックスに `__c` の代わりに `__x` を持ちます。
+	- 外部オブジェクトは外部データソースへの参照を持っており、実際のテーブルはソース側にあります。
+	- 外部オブジェクトは別の標準項目を持っています。**表示 URL** はレコードの外部データベースのOData 2.0 URL を表しており、 **外部 ID** はレコードごとの主キーの値を表します。
 
 	![](images/orders-external-object.png)
 
-## Step 4: Create a Custom Tab to Easily Access Order Records
+## ステップ 4: 注文レコードへアクセスを容易にするためにカスタムタブを作成する
 
-1. Click **Setup** (upper right corner)
+1. **設定** をクリックします。(右上隅)
 
-1. Click **Create** > **Tabs**
+1. **作成** > **タブ**　をクリックします。
 
-1. Click the **New** button next to **Custom Object Tabs**.
+1. **カスタムオブジェクトタブ**　の横の **新規** をクリックします。
 
-1. Select **Orders** as the Object.
+1. オブジェクトから **Orders** を選択します。
 
-1. Click the selector next to **Tab Style** and choose whichever style you like.
+1. **タブスタイル** の横の虫眼鏡アイコンから好きなスタイルを選択します。
 
-1. Click **Next**.
+1. **次へ** をクリックします。
 
-1. Click **Next** to accept the default tab visibility settings.
+1. **次へ** をクリックして標準の表示設定を利用します。
 
-1. Click the checkbox next to **Include Tab** to deselect all the apps.
+1. **タブを含める**の隣のチェックボックスをクリックし、全てのアプリの選択を外します。
 
-1. Click the checkbox next to **External Orders** to select it.
+1. **External Orders** の隣のチェックボックスを選択します。
 
-1. Click **Save**.
+1. **保存** をクリックします。
 
-## Step 5: View the External Order Data
+## ステップ 5: 外部の注文データを確認する
 
-1. If the app menu (top right) is not already showing **External Orders**, then click the app menu and select it.
+1. もしアプリケーションメニュー (右上) が**External Orders** を表示していない場合は、アプリケーションメニューから選択します。
 
 	![](images/external-orders-app.png)
 
-1. Click the Orders tab.
+1. Orders タブを選択します。
 
-1. Click the **Go!** button next to View: All.
+1. **Go!** ボタンをクリックし、Allを選択します。
 
 	![](images/orders.png)
 
-	Lightning Connect retrieved order ids for the first 25 order records from the sample order database.
+	Lightning コネクトは最初の25個の注文レコードのIdを注文データベースより取得します。
 
-1. Click one of the order external id values.
+1. １つのオーダーの外部IDの値をクリックします。
 
 	![](images/order.png)
 
-	Lightning Connect retrieved all the fields for the order you selected.
+	Lightning コネクトは選択したレコードの全ての項目の値を取得し表示します。
 
-	> It's important to remember that external data is never duplicated in Salesforce. Lightning Connect always fetches current external data, in real-time.
+	> 外部データはSaleforceにコピーされることは無いという点は重要です。Lightning コネクトは常に現在の外部データをリアルタイムに取得しに行きます。
 
-Now we can see external data in Salesforce, we need to link it to existing data by creating *lookup relationships*.
+これで外部データをSalesforceで表示できました。ここから既存のデータへ*参照関係*を作成してつなげていきましょう。
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
-<a href="create-developer-edition.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
-<a href="create-lookup-relationships.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="create-developer-edition.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> 戻る</a>
+<a href="create-lookup-relationships.html" class="btn btn-default pull-right">次へ <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 </div>

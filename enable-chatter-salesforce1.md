@@ -1,6 +1,6 @@
 ---
 layout: module
-title: Module 5&#58; Wrapping Up&#58; Enable Chatter and View Orders in Salesforce1
+title: モジュール 5&#58; 確認&#58; Chatterを有効化しSalesforce1で注文を見る
 ---
 
 In this module, you will enable the Chatter feed for orders, so users can collaborate around them, and view the finished integration in the Salesforce1 mobile app.

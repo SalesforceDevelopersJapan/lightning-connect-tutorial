@@ -1,6 +1,6 @@
 ---
 layout: module
-title: Module 4&#58; Configuring Indirect and External Lookup Relationships
+title: モジュール 4&#58; 間接及び外部参照関係の設定
 ---
 
 Now you can see external order data in Salesforce; in this module, you will configure lookup relationships to link orders to their line items, and to accounts in Salesforce.
@@ -64,19 +64,19 @@ In the previous module, you were able to view an order in Salesforce. Recall tha
 
 1. You can click a line item's External ID to view its details, but let's show line item details right here on the related list. Select the Force.com Quick Access Menu by clicking the gray triangle on the right of the page.
 
-	![](images/order-click-quick-access.png)	
+	![](images/order-click-quick-access.png)
 
 1. Click **Edit Layout**.
 
-	![](images/edit-orders-layout.png)	
+	![](images/edit-orders-layout.png)
 
 1. Scroll down to the **OrderDetails** related list, and click the wrench icon.
 
-	![](images/edit-orderdetails-list.png)	
+	![](images/edit-orderdetails-list.png)
 
 1. Remove **Display URL** from the Selected Fields, add **product**, **quantity** and **unitPrice**, and click **OK**.
 
-	![](images/orderdetails-related-list-properties.png)	
+	![](images/orderdetails-related-list-properties.png)
 
 1. Click **Save** at the top of the page and you will see order line item details in the related list.
 
@@ -136,7 +136,7 @@ Now you can see the line items on the order page, the next step is to configure 
 
 1. Remove **Display URL** from the Selected Fields, add **orderDate** and **shippedDate**. For Sort By, click **orderDate** and select **Descending** so that you see the most recent orders first. Click **OK**.
 
-	![](images/orders-related-list-properties.png)	
+	![](images/orders-related-list-properties.png)
 
 1. Click **Save** at the top of the page, scroll down, and you will see order dates in the related list.
 
