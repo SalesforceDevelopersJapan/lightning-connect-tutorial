@@ -3,150 +3,150 @@ layout: module
 title: モジュール 4&#58; 間接及び外部参照関係の設定
 ---
 
-Now you can see external order data in Salesforce; in this module, you will configure lookup relationships to link orders to their line items, and to accounts in Salesforce.
+外部の注文データをSalesforce上でみれるようになりました。このモジュールでは、ルックアップ関連を注文と明細、そして取引先に対してSalesforceで設定を行います。
 
-## What you will learn
-- Configure an external lookup relationship
-- Configure an indirect lookup relationship
-- Customize the display of external data
+## 何を学ぶことができるか
+- 外部参照関係の設定
+- 間接参照関係の設定
+- 外部オブジェクトの表示をカスタマイズ
 
-## Step 1: Configure an External Lookup Relationship
+## ステップ 1: 外部参照関係の設定
 
-In the previous module, you were able to view an order in Salesforce. Recall that when you selected the Orders table for synchronization, you also selected the OrderDetails table, which contains line items for each order. By creating an *external lookup relationship* from OrderDetails to Orders you will be able to see the line items on an order's page in Salesforce.
+前のモジュールでは、注文情報をSalesforce上で見れるようにしました。ここで注文同期する際に、オーダー毎の明細を持つ OrderDetails テーブルも選択したことを思い出して下さい。ここで*外部参照関係* をOrderDetailsからOrdersに設定することで、Salesforce上の注文ページから明細データを見ることができます。
 
-> You can think of external lookup relationship as modelling a foreign key relationship between any object (standard, custom or external) and an external object. You're telling Salesforce that a field on one object, in this case, OrderId on OrderDetails, corresponds to the external ID field on an external object, in this case, Orders.
+> 外部参照関係は任意のオブジェクト(標準、カスタム、外部)から外部オブジェクトへ対してモデリングにおける外部キーによる関連と捉えることができます。 Salesforce 内のフィールドを１つ指定し、このケースではOrderDetailsの中のOrderIdを指定して、 対応する外部オブジェクトの外部Id項目を指定します。こおｎケースでは受注テーブルを指します。 Orders.
 
-1. Login to your Salesforce Developer Edition
+1. Salesforce Developer Editionへログインします
 
-1. Click **Setup** (upper right corner)
+1. **設定** をクリックします。(右上端)
 
-1. Click **Develop** > **External Objects** (left navigation)
+1. **開発** > **外部オブジェクト**をクリックします (左ナビゲーション)
 
-1. Click the **OrderDetails** external object.
+1. **OrderDetails** 外部オブジェクトをクリックします
 
 	![](images/click-order-details.png)
 
-1. Click the **Edit** link next to Order ID.
+1. Order IDの横の**編集** リンクをクリックします
 
 	![](images/edit-order-id.png)
 
-1. Click the **Change Field Type** button.
+1. **データ型の変更** ボタンをクリックします
 
 	![](images/change-order-id.png)
 
-1. Select **External Lookup Relationship** and click **Next**. An external lookup relationship can link any object to an external object.
+1. **外部参照関係** を選択し **次へ** をクリックします。外部参照関係は任意のオブジェクトと外部オブジェクトをリンクすることができます。
 
-1. Select **Orders** as the value of Related To and click **Next**.
+1. **Orders** を関連先で選択し、 **次へ** をクリックします。
 
 	![](images/select-orders.png)
 
-1. Enter **18** as the value for Length and click **Next**.
+1. **18** を文字数に入力し、 **次へ** をクリックします。
 
-1. Enable the **Visible** checkbox to make the relationship visible to all profiles, and click **Next**.
+1. **参照可能** チェックボックスで全てのプロファイルでこの参照関係を閲覧可能にし **次へ** をクリックします。
 
 	![](images/order-field-visibility.png)
 
-	> In a real production deployment, you would carefully analyze which profile should have access to order line items.
+	> 実際の運用環境では、どのプロファイルが明細に隠せす可能かどうかを十分に分析した方がよいでしょう。
 
-1. Click **Save** to accept the defaults - you definitely want an 'OrderDetails' related list on the Orders page layout!
+1. **保存** をクリックし、詳細を確認します - これで '注文明細' 関連リストを注文ページのレイアウトで利用できるようになりました!
 
-1. If the app menu (top right) is not already showing **External Orders**, then click the app menu and select it.
+1. もしアプリケーショんメニュー (右上) が **External Orders** を表示していない場合は、アプリケーションメニューから選択を行います
 
-1. Click the **Orders** tab.
+1. **注文**タブをクリックします.
 
-1. Click the External ID of an order in the Recent Orders list.
+1. 最近使った注文のリストから注文の外部Idを選択します
 
 	![](images/click-recent-order.png)
 
-1. You should see a list of line items for the order.
+1. 注文の明細リストが表示されます
 
 	![](images/order-with-list.png)
 
-1. You can click a line item's External ID to view its details, but let's show line item details right here on the related list. Select the Force.com Quick Access Menu by clicking the gray triangle on the right of the page.
+1. 明細の外部IDをクリックして詳細確認することもできますが、ここでは明細の詳細は関連リストで見るだけにしておきます。ページの右側にあるForce.comクイックアクセスメニューのグレイの三角形をクリックします。
 
 	![](images/order-click-quick-access.png)
 
-1. Click **Edit Layout**.
+1. **レイアウトを編集する** をクリックします。
 
 	![](images/edit-orders-layout.png)
 
-1. Scroll down to the **OrderDetails** related list, and click the wrench icon.
+1. **注文明細** の関連リストまでスクロールし、レンチのアイコンをクリックします。
 
 	![](images/edit-orderdetails-list.png)
 
-1. Remove **Display URL** from the Selected Fields, add **product**, **quantity** and **unitPrice**, and click **OK**.
+1.  **表示URL** を選択済み項目から除外し、**製品**, **数量** 及び **ユニットプライス** を選択し **OK** をクリックします。
 
 	![](images/orderdetails-related-list-properties.png)
 
-1. Click **Save** at the top of the page and you will see order line item details in the related list.
+1. **保存** をクリックしてトップへ戻り、 注文明細の関連リストの表示を確認します。
 
 	![](images/order-with-edited-list.png)
 
-## Step 2: Configure an Indirect Lookup Relationship
+## ステップ 2: 間接参照関係を設定する
 
-Now you can see the line items on the order page, the next step is to configure an indirect lookup relationship between orders and accounts, so you can see which account a given order is associated with, and see all the orders for a given account.
+これで注文ページで明細アイテムを閲覧することが可能になりました。次のステップでは、間接参照関係を注文と取引先の間に設定し、どの取引先が注文を行ったのかを閲覧し、どのように取引先と注文が関連し、特定のアカウントの全ての注文情報を見れるかを確認します。
 
-> An indirect lookup relationship models a foreign key relationship between an external object and a custom or standard object. This time you're telling Salesforce that a field on an external object, in this case, customerId on Orders, corresponds to a unique, external ID field on a custom or standard object, in this case, Customer\_ID__c on Account. It's an indirect lookup, since it references a field other than the standard ID field.
+> 間接参照関係は外部キーによる関連を外部オブジェクトとカスタムオブジェクトや標準オブジェクトに設定します。 Salesforceでは外部オブジェクト上の項目を指定し、この場合は注文上のcustomerIdがそれにあたります、 対応する一意の外部ID項目をカスタムもしくは標準オブジェクトから選択します。この場合は取引先上の Customer\_ID__c がそれに当たります。標準的なID項目以外の項目を参照するため、間接参照と呼んでいます。
 
-1. If you are not already on the order page, select the **External Orders** app (top right), click the **Orders** tab, and click an order's External ID in the Recent Orders list.
+1. もし注文ページに居ない場合は **外部注文** アプリを選択します(右上), **注文** タブをクリックし、最近使った注文のリストから任意の外部IDを選択します。
 
-1. Select the Force.com Quick Access Menu by clicking the gray triangle on the right of the page.
+1. ページ右側の Force.com クイックアクセスメニューから、グレーの三角のアイコンをクリックします。
 
-1. Select **View Fields**.
+1. **項目を参照する**を選択します。
 
-1. Click the **Edit** link next to Customer ID.
+1. Customer IDの横の**編集** リンクをクリックします。
 
 	![](images/edit-customer-id.png)
 
-1. Click the **Change Field Type** button.
+1. **データ型の変更** ボタンをクリックします。
 
-1. Select **Indirect Lookup Relationship** and click **Next**. An indirect lookup relationship links an external object, such as orders, to a standard object, such as account, or even a custom object you've created yourself.
+1. **間接参照関係** を選択し **次へ** をクリックします。間接参照関係は注文のような外部オブジェクトをと取引先のような標準オブジェクトや、自身で作成したカスタムオブジェクトと関連させます。
 
-1. Select **Account** as the value of Related To and click **Next**.
+1. **取引先** を関連先に選択し **次へ** をクリックします。
 
 	![](images/select-account.png)
 
-1. Select **Customer\_ID__c** as the value of Target Field and click **Next**.
+1. **Customer\_ID__c** を対象項目に選択肢、 **次へ** をクリックします。
 
 	![](images/select-customer-id.png)
 
-1. Enter **18** as the value for Length and click **Next**.
+1. **18** を文字数に入力し、 **次へ** をクリックします。
 
-1. Enable the **Visible** checkbox to make the relationship visible to all profiles, and click **Next**.
+1. **参照可能** チェックボックスで全てのプロファイルから関連を見れるようにし、 **次へ** をクリックします。
 
-1. Click **Save** to accept the defaults - you want that 'Orders' related list on the Account page layout!
+1. **保存** をクリックして反映させます - これで '注文' は取引先のページレイアウトに表示されるようになりました。
 
-1. If the app menu (top right) is not already showing **External Orders**, then click the app menu and select it.
+1. もしアプリケーションが (右上) 既に **外部注文** が選択されていない場合、アプリケーションメニューより選択します。.
 
-1. Click the **Orders** tab.
+1. **注文** タブをクリックします。
 
-1. Click the External ID of an order in the Recent Orders list.
+1. 最近使った注文のリストから注文の外部IDを設定します。
 
-1. Now the order should show a link in the customerID field.
+1. 注文ページにcustomerID項目がリンクとなって表示されます。
 
-1. Click the customerID link and you should be taken to the corresponding account page. Scroll to the bottom and you'll see a list of orders.
+1. customerID リンクがをクリックすると、対応する取引先ページを取得できます。ページ下部へスクロールすると、注文のリストが確認できます。
 
 	![](images/orders-related-list.png)
 
-1. Again, you can customize the UI to show more useful information in the related list. Select the Force.com Quick Access Menu by clicking the gray triangle on the right of the page.
+1. 更に、関連リストにより有用な情報がふおじされるようにカスタマイズします。ページ右側のForce.com クイックスタートメニューの三角形のアイコンをクリックします。
 
-1. Select **Edit Layout**.
+1. **レイアウトの編集** をクリックします。
 
-1. Scroll down to the **Orders** related list, and click the wrench icon.
+1. **注文** 関連リストまでスクロールし、レンチのアイコンをクリックします。
 
-1. Remove **Display URL** from the Selected Fields, add **orderDate** and **shippedDate**. For Sort By, click **orderDate** and select **Descending** so that you see the most recent orders first. Click **OK**.
+1. **表示URL** を選択済みの項目から削除し、**注文日** と **配送日**を選択し、並び替えには **注文日** を **降順** で選択し、直近の注文が先に表示されるようにして **OK** をクリックします。
 
 	![](images/orders-related-list-properties.png)
 
-1. Click **Save** at the top of the page, scroll down, and you will see order dates in the related list.
+1. ページのトップの **保存** をクリックしてスクロールダウンし、オーダー日時が表示されてる事を確認します。
 
 	![](images/account-with-edited-list.png)
 
-Now your external order data is integrated seamlessly with accounts. All that's left is to enable Chatter feeds on order records, and view the complete integration in the Salesforce1 mobile app.
+これで外部の注文データは取引先とシームレスに統合されました。残りは注文レコードにChatterフィードを有効化し、 Salesforce1モバイル・アプリケーションとの統合を完了させることです。
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
-<a href="configure-data-source-objects.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
-<a href="enable-chatter-salesforce1.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="configure-data-source-objects.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> 戻る</a>
+<a href="enable-chatter-salesforce1.html" class="btn btn-default pull-right">次へ <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 </div>
