@@ -9,21 +9,13 @@ title: モジュール 2&#58; Schemaパッケージのインストール
 
 1. ブラウザを開き[こちらをクリック](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tE00000001aqG)してパッケージをインストールします。
 
-1. **次へ**をクリックします。
+1. **インストール**をクリックします。
 
 	![](images/package-install-1.png)
 
-1. 下へスクロールし、 **次へ** をクリックしてデフォルトのパッケージアクセス権限を許可します。
-
-	![](images/package-install-2.png)
-
-1. **次へ** をクリックして、パッケージへのアクセスを管理者のみにします。
-
-	![](images/package-install-3.png)
-
 1. **インストール** をクリックし、パッケージのインストールを完了します。
 
-	![](images/package-install-4.png)
+	![](images/package-install-2.png)
 
 1. 右上のアプリケーションメニューより**外部のオーダー** を開きます
 
